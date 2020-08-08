@@ -1,0 +1,13 @@
+// Makes more sense to include bootstrap here instead of in JS code
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index';
+
+* {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+.callout {
+   font-weight: 900;
+}
+
