@@ -1,12 +1,11 @@
 <template>
-   <div class="callout align-middle"
+   <div class="d-inline-flex flex-row align-items-center"
         @mouseover="hovered = true" 
         @mouseleave="hovered = false">
       <navdot class="mr-2" 
               :expand="hovered" 
-              :color="currentColor" 
               :radius="navDotRadius" />
-      <a class="navbar-content" 
+      <a class="navbar-content callout highlight"
          :style="textStyle">
          <slot />
       </a>
@@ -14,7 +13,7 @@
 </template>
 
 <script>
-import Navdot from '@/components/Navbar/Navdot'
+import Navdot from "./Navdot"
 
 export default {
    name: "NavbarItem",
@@ -24,29 +23,26 @@ export default {
    data: function() {
       return {
          hovered: false,
-         navDotRadius: .3,
-
+         navDotRadius: .5,
       }
    },
    props: {
       baseColor: {
+         // sets the color of inner nav dot
          type: String,
-         default: "black"
+         default: "#ffffff"
       },
       hoverColor: {
+         // sets the color of the expanded nav dot border
          type: String,
-         default: "#FF7E7E"
-      }
+         default: "#ffffff"
+      },
    },
    computed: {
-      currentColor: function() {
-         return this.hovered ? this.hoverColor : this.baseColor
-      },
       textStyle: function() {
          return {
-            color: this.currentColor,
             opacity: this.hovered ? 1 : 0,
-            "font-size": this.navDotRadius * 3 + 'em'
+            "font-size": this.navDotRadius * 1.7 + 'em'
          }
       }
    }
@@ -54,7 +50,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/common/_constants';
+
 .navbar-content {
-   transition: all 300ms;
+   transition: all $transition-speed;
 }
 </style>

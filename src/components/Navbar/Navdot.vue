@@ -1,65 +1,67 @@
 <template>
-   <span class="static-dot" :style="[{ 'background-color': color }, sizeStyle]" />
+   <!-- <div> -->
+   <span class="nav-dot d-inline-block" 
+         :style="[backgroundStyle, sizeStyle, borderStyle]" />
+   <!-- </div> -->
 </template>
 
 <script>
+import chroma from "chroma-js"
+
 export default {
    name: "Navdot",
    props: {
       expand: {
+         // put dot in expanded state
          type: Boolean,
          required: true
       },
       radius: {
+         // the starting radius of the dot in 'em'
          type: Number,
          required: true
       },
       color: {
+         // color of inner circle, opacity set to slightly lower
          type: String,
-         required: true
+         default: "#ffffff"
       },
-      expandColor: {
+      expandColor: { 
+         // expanded border color, opacity set to 1
+         // currently must be in hex format
          type: String,
-         default: "black"
+         default: "#ffffff" 
       }
    },
    computed: {
+      backgroundStyle: function() {
+         return {
+            'background-color': chroma(this.color).alpha(0.7).css()
+         }
+      },
       sizeStyle: function() {
          return {
             width: this.radius * 2 + 'em',
             height: this.radius * 2 + 'em'
          }
       }, 
+      borderStyle: function() {
+         return {
+            'border-color': chroma(this.expandColor).alpha(this.expand ? 1 : 0).css(),
+            'border-width': this.radius / 3.3 + 'em'
+         }
+      }
    }
 }
 </script>
 
 <style lang="scss" scoped>
-* {
-   box-sizing: border-box;
-}
+@import '@/styles/common/_constants';
 
-.static-dot {
-   position: relative;
-   border-radius: 50%;
-   display: inline-block;
-   transition: all 300ms;
-}
-
-.dynamic-dot {
-   position: absolute;
-   background-color: black;
-   transition: all 300ms;
-   width: 99%;
-   height: 99%;
-   top: 0;
-   left: 0;
-   display: inline-block;
-   z-index: -1;
-   border-radius: 50%;
-}
-
-.dynamic-dot.large {
-   transform: scale(1.8);
+.nav-dot {
+   border-radius: 100%;
+   transition: all $transition-speed;
+   border-style: solid;
+   background-clip: padding-box;
 }
 </style>

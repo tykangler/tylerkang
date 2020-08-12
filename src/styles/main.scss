@@ -2,12 +2,38 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index';
 
+/* Available Classes for Theming:
+** .callout
+** .highlight
+** .section-heading
+** .section-content
+** .title
+** .nav-link
+** .nav-dot
+*/
+
 * {
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-osx-font-smoothing: grayscale !important;
+   box-sizing: border-box !important;
 }
 
 .callout {
-   font-weight: 900;
+   font-weight: 900 !important;
 }
 
+.highlight {
+   color: #ff7e7e !important;
+}
+
+.section-heading {
+
+}
+
+.section-content {
+
+}
+
+.title {
+
+}
