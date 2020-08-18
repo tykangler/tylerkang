@@ -24,8 +24,6 @@
          <b-row>
             <b-col class="text-center">
                <navbar-item :hovered="hover" 
-                            :hover-color="hoverColor" 
-                            :base-color="baseColor"
                             class="new-line">Test</navbar-item>
                             <!-- Child text sometimes breaks navdot proportions -->
             </b-col>
@@ -51,6 +49,9 @@
             </b-col>
          </b-row>
       </section>
+      <section id="introduction" class="m-4">
+         <introduction />
+      </section>
   </b-container>
 </div>
 </template>
@@ -60,6 +61,7 @@
 import Navdot from '@/components/Navbar/Navdot'
 import NavbarItem from '@/components/Navbar/NavbarItem'
 import Navbar from '@/components/Navbar/Navbar'
+import Introduction from '@/components/Introduction'
 
 export default {
    name: 'App',
@@ -67,7 +69,8 @@ export default {
       // HelloWorld, 
       Navdot,
       NavbarItem,
-      Navbar
+      Navbar,
+      Introduction
    },
   data: function() {
     return {
@@ -80,7 +83,6 @@ export default {
         { id: 3, text: "Contact" },
         { id: 4, text: "Resume"}
       ],
-
     }
   },
 }
@@ -90,12 +92,7 @@ export default {
 
 main {
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
-}
-
-h4 {
-   color: #ffffff;
 }
 
 section {

@@ -5,7 +5,7 @@
          <navbar-item v-for="item of items"
                       class="mb-2"
                       :key="item">
-            <span class="text-uppercase">{{ item }}</span>
+            <span class="text-uppercase highlight">{{ item }}</span>
          </navbar-item>
       </div>
    </nav>

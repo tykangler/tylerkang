@@ -2,20 +2,21 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index';
 
-/* Available Classes for Theming:
+/* Install Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+
+/* Classes for Theming:
 ** .callout
 ** .highlight
 ** .section-heading
 ** .section-content
 ** .title
-** .nav-link
-** .nav-dot
 */
-
 * {
    -webkit-font-smoothing: antialiased !important;
    -moz-osx-font-smoothing: grayscale !important;
    box-sizing: border-box !important;
+   color: #ffffff;
 }
 
 .callout {
@@ -26,14 +27,24 @@
    color: #ff7e7e !important;
 }
 
-.section-heading {
+.heading {
 
 }
 
-.section-content {
+.content {
 
 }
 
 .title {
-
+   text-transform: uppercase;
+   letter-spacing: .35em;
+   font-family: 'Source Code Pro', 'monospace';
+   font-weight: 700;
+   font-size: 35px;
+   font-style: normal;
 }
+
+.title > * {
+   font-weight: inherit;
+}
+

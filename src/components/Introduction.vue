@@ -1,26 +1,26 @@
 <template>
    <div class="title">
-      <h1><slot class="highlight" /></h1>
-      <h1>A 
-         <transition name="rotate-labels">
-            <p> {{ currentLabel }} </p>
-         </transition>
-      </h1>
+      <h1>Hey, I'm <span class="highlight">Tyler!</span></h1>
+      <h1>A <typewriter class="highlight" :labels="labels"/></h1>
    </div>
 </template>
 
 <script>
+import Typewriter from '@/components/animations/Typewriter'
+
 export default {
    name: "Introduction",
-   props: {
-      labels: {
-         type: Array,
-         required: true
+   components: {
+      Typewriter
+   },
+   data: function() {
+      return {
+         labels: ["Foo", "Bar", "Baz", "Label", "Wizard", "Jedi Master", "Luke Skywalker"]
       }
    }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

@@ -36,7 +36,7 @@ export default {
    computed: {
       backgroundStyle: function() {
          return {
-            'background-color': chroma(this.color).alpha(0.7).css()
+            backgroundColor: chroma(this.color).alpha(0.7).css()
          }
       },
       sizeStyle: function() {
@@ -47,8 +47,8 @@ export default {
       }, 
       borderStyle: function() {
          return {
-            'border-color': chroma(this.expandColor).alpha(this.expand ? 1 : 0).css(),
-            'border-width': this.radius / 3.3 + 'em'
+            borderColor: chroma(this.expandColor).alpha(this.expand ? 1 : 0).css(),
+            borderWidth: this.radius / 3.3 + 'em'
          }
       }
    }

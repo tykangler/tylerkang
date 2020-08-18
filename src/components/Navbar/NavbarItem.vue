@@ -42,7 +42,7 @@ export default {
       textStyle: function() {
          return {
             opacity: this.hovered ? 1 : 0,
-            "font-size": this.navDotRadius * 1.7 + 'em'
+            fontSize: this.navDotRadius * 1.7 + 'em'
          }
       }
    }
