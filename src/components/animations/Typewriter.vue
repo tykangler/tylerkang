@@ -1,7 +1,5 @@
 <template>
-   <transition name="typewriter" mode="out-in">
-      <p :key="currentIndex" class="d-inline label"> {{ currentLabel }} </p>
-   </transition>
+   <p :key="currentIndex" class="d-inline label"> {{ display }} </p>
 </template>
 
 <script>
@@ -9,11 +7,11 @@ export default {
    name: "Typewriter",
    data: function() {
       return {
-         currentLabel: "",
-         durations: []
+         display: "",
       }
    },
    props: {
+      // the words to cycle through
       words: {
          type: Array,
          required: true,
@@ -21,15 +19,25 @@ export default {
             return value.length != 0;
          }
       },
+      // time per char in milliseconds
+      typeSpeed: {
+         type: Number,
+         default: 120,
+      },
+      delayPerWord: {
+         type: Number,
+         default: 500
+      }
    },
-   created: function() {
-      this.currentLabel = this.words[0];
-      this.durations = 
-      window.setTimeout(() => {
-         this.currentLabel = this.words[1];
-      }, this.durations[0]);
-      for (let i = 0; i < words.length; ++i) {
-         window.setTimeout(() => this.currentLabel = this.words[i]);
+   mounted: function() {
+      for (let word of this.words) {
+         this.typeWord(word);
+         await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+   },
+   methods: {
+      typeWord: function(word) {
+         this.display = word;
       }
    }
 }
