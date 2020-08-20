@@ -1,5 +1,9 @@
+<!-- Plan to optimize this later. -->
+
 <template>
-   <p :key="currentIndex" class="d-inline label"> {{ display }} </p>
+   <!-- <transition name="type"> -->
+      <p :key="display" class="d-inline label"> {{ display }} </p>
+   <!-- </transition> -->
 </template>
 
 <script>
@@ -8,6 +12,7 @@ export default {
    data: function() {
       return {
          display: "",
+         durations: this.words.map((val) => this.typeDelay * val.length * 2 + this.postTypeDelay)
       }
    },
    props: {
@@ -20,32 +25,46 @@ export default {
          }
       },
       // time per char in milliseconds
-      typeSpeed: {
+      typeDelay: {
          type: Number,
          default: 120,
       },
-      delayPerWord: {
+      eraseDelay: {
+         type: Number,
+         default: 500
+      },
+      postTypeDelay: {
          type: Number,
          default: 500
       }
    },
-   mounted: function() {
+   mounted: async function() {
       for (let word of this.words) {
-         this.typeWord(word);
-         await new Promise(resolve => setTimeout(resolve, 1000));
+         await this.typeWord(word);
+         await this.sleep(this.postTypeDelay);
       }
    },
    methods: {
-      typeWord: function(word) {
-         this.display = word;
+      typeWord: async function(word) {
+         for (let char of word) {
+            this.display += char;
+            await this.sleep(this.typeDelay);
+         }
+         await this.sleep(this.eraseDelay);
+         for (let i = word.length - 1; i >= 0; --i) {
+            this.display = this.display.slice(0, i);
+            await this.sleep(this.typeDelay);
+         }
+      },
+      sleep: async function(delay) {
+         return new Promise(resolve => setTimeout(resolve, delay));
       }
    }
 }
 </script>
 
 <style lang="scss" scoped>
-@keyframes type {
-   from { width: 0%; }
-   to { width: 100%; }
-}
+
+
+
 </style>
