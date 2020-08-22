@@ -69,7 +69,7 @@ import Navbar from '@/components/Navbar/Navbar'
 import Introduction from '@/components/Introduction'
 
 export default {
-   name: 'App',
+   name: 'ComponentTest',
    components: {
       // HelloWorld, 
       Navdot,

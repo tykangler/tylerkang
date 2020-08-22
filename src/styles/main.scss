@@ -1,6 +1,8 @@
 // Makes more sense to include bootstrap here instead of in JS code
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index';
+// custom imports
+@import './background.scss';
 
 /* Install Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
