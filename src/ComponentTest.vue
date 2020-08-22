@@ -50,7 +50,12 @@
          </b-row>
       </section>
       <section id="introduction" class="m-4">
-         <introduction />
+         <h4 class="text-center">&lt;introduction&gt;</h4>
+         <b-row>
+            <b-col>
+               <introduction />
+            </b-col>
+         </b-row>
       </section>
   </b-container>
 </div>
