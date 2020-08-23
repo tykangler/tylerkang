@@ -1,12 +1,12 @@
 <template>
    <div>
-      <nav-bar class="nav-bar" :items="navBarItems" />
-      <b-container>
-         <Home />
-         <!-- <About />
-         <Projects />
-         <Contact /> -->
+      <b-container id="main">
+         <home id="home" />
+         <!-- <About id="about" /> -->
+         <!-- <Projects id="projects" /> -->
+         <!-- <Contact id="contact" /> -->
       </b-container>
+      <nav-bar class="nav-bar" :items="navBarItems" scroll-spy="main"/>
    </div>
 </template>
 
@@ -28,7 +28,12 @@ export default {
    },
    data: function() {
       return {
-         navBarItems: ["Home", "About", "Projects", "Contact", "Resume"]
+         navBarItems: [
+            { label: "Home", href: "#home" },
+            { label: "About", href: "#foo" },
+            { label: "Projects", href: "#bar" },
+            { label: "Contact", href: "#baz" },
+            { label: "Resume", href: "#babar" }]
       }
    }
 }
@@ -39,6 +44,7 @@ export default {
 .nav-bar {
    left: 20px;
    top: 100px;
+   position: fixed;
 }
 
 </style>

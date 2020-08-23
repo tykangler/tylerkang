@@ -1,8 +1,6 @@
 <template>
-   <!-- <div> -->
    <span class="nav-dot d-inline-block" 
          :style="[backgroundStyle, sizeStyle, borderStyle]" />
-   <!-- </div> -->
 </template>
 
 <script>
@@ -10,6 +8,11 @@ import chroma from "chroma-js"
 
 export default {
    name: "Navdot",
+   data: function() {
+      return {
+         color: "#ffffff"
+      }
+   },
    props: {
       expand: {
          // put dot in expanded state
@@ -21,17 +24,6 @@ export default {
          type: Number,
          required: true
       },
-      color: {
-         // color of inner circle, opacity set to slightly lower
-         type: String,
-         default: "#ffffff"
-      },
-      expandColor: { 
-         // expanded border color, opacity set to 1
-         // currently must be in hex format
-         type: String,
-         default: "#ffffff" 
-      }
    },
    computed: {
       backgroundStyle: function() {
@@ -47,7 +39,7 @@ export default {
       }, 
       borderStyle: function() {
          return {
-            borderColor: chroma(this.expandColor).alpha(this.expand ? 1 : 0).css(),
+            borderColor: chroma(this.color).alpha(this.expand ? 1 : 0).css(),
             borderWidth: this.radius / 3.3 + 'em'
          }
       }

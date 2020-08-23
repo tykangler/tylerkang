@@ -1,7 +1,9 @@
 <template>
-   <b-row>
-      <b-col><introduction /></b-col>
-   </b-row>
+   <div>
+      <b-row class="intro">
+         <b-col><introduction /></b-col>
+      </b-row>
+   </div>
 </template>
 
 <script>
@@ -16,5 +18,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.intro {
+   top: 200px;
+}
 
 </style>

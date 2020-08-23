@@ -1,12 +1,13 @@
 <template>
    <div class="d-inline-flex flex-row align-items-center"
-        @mouseover="hovered = true" 
-        @mouseleave="hovered = false">
-      <navdot class="mr-2" 
-              :expand="hovered" 
-              :radius="navDotRadius" />
-      <a class="navbar-content callout highlight"
-         :style="textStyle">
+        @mouseover="active=true"
+        @mouseleave="active=false">
+      <navdot :expand="active" 
+              :radius="navDotRadius"
+              class="mr-2" />
+      <a class="navbar-link callout highlight"
+         :style="textStyle"
+         :href="href">
          <slot />
       </a>
    </div>
@@ -22,26 +23,20 @@ export default {
    },
    data: function() {
       return {
-         hovered: false,
          navDotRadius: .5,
+         active: false
       }
    },
    props: {
-      baseColor: {
-         // sets the color of inner nav dot
+      href: {
          type: String,
-         default: "#ffffff"
-      },
-      hoverColor: {
-         // sets the color of the expanded nav dot border
-         type: String,
-         default: "#ffffff"
+         required: true
       },
    },
    computed: {
       textStyle: function() {
          return {
-            opacity: this.hovered ? 1 : 0,
+            opacity: this.active ? 1 : 0,
             fontSize: this.navDotRadius * 1.7 + 'em'
          }
       }
@@ -52,7 +47,8 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/common/_constants';
 
-.navbar-content {
+.navbar-link {
    transition: all $transition-speed;
+   text-decoration: none;
 }
 </style>

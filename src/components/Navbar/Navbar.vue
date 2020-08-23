@@ -1,11 +1,12 @@
 <template>
-   <b-nav class="navbar" :style="{ height: containerHeight }" v-b-scrollspy:[scrollSpy]>
-      <hr class="line d-inline-block" :style="lineStyle">
+   <b-nav class="navbar" :style="{ height: containerHeight }">
+      <!-- <hr class="line d-inline-block" :style="lineStyle"> -->
       <div class="d-inline-flex flex-column nav-items">
-         <navbar-item v-for="item of items"
+         <navbar-item v-for="{ label, href } of items"
                       class="mb-2"
-                      :key="item">
-            <span class="text-uppercase highlight">{{ item }}</span>
+                      :key="label"
+                      :href="href">
+            <span class="text-uppercase highlight">{{ label }}</span>
          </navbar-item>
       </div>
    </b-nav>
@@ -21,18 +22,17 @@ export default {
    },
    data: function() {
       return {
-         containerHeight: this.items.length * 4 + 'em'
+         containerHeight: this.items.length * 4 + 'em',
       }
    },
    props: {
       items: {
          type: Array,
          required: true,
+         validator: function(value) {
+            return value.every(obj => 'label' in obj && 'href' in obj);
+         }
       },
-      scrollSpy: {
-         type: String,
-         required: true
-      }
    },
    computed: {
       lineStyle: function() {
@@ -48,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 .navbar {
    display: inline-block;
-   position: relative;
+   position: absolute;
    padding: 0;
 }
 
