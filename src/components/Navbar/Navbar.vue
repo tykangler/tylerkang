@@ -1,5 +1,5 @@
 <template>
-   <nav class="navbar" :style="{ height: containerHeight }">
+   <b-nav class="navbar" :style="{ height: containerHeight }" v-b-scrollspy:[scrollSpy]>
       <hr class="line d-inline-block" :style="lineStyle">
       <div class="d-inline-flex flex-column nav-items">
          <navbar-item v-for="item of items"
@@ -8,7 +8,7 @@
             <span class="text-uppercase highlight">{{ item }}</span>
          </navbar-item>
       </div>
-   </nav>
+   </b-nav>
 </template>
 
 <script>
@@ -29,6 +29,10 @@ export default {
          type: Array,
          required: true,
       },
+      scrollSpy: {
+         type: String,
+         required: true
+      }
    },
    computed: {
       lineStyle: function() {

@@ -1,6 +1,6 @@
 <template>
    <div>
-      <nav-bar :items="navBarItems" />
+      <nav-bar class="nav-bar" :items="navBarItems" />
       <b-container>
          <Home />
          <!-- <About />
@@ -28,12 +28,17 @@ export default {
    },
    data: function() {
       return {
-         navBarItems: ["Home, About, Projects, Contact"]
+         navBarItems: ["Home", "About", "Projects", "Contact", "Resume"]
       }
    }
 }
 </script>
 
 <style lang="scss" scoped>
+
+.nav-bar {
+   left: 20px;
+   top: 100px;
+}
 
 </style>
