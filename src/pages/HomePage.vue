@@ -10,7 +10,7 @@
 import Introduction from '@/components/Introduction'
 
 export default {
-   name: 'Home',
+   name: 'HomePage',
    components: {
       Introduction
    }

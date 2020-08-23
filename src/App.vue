@@ -11,29 +11,29 @@
 </template>
 
 <script>
-import Home from '@/pages/Home'
-// import About from '@/pages/About'
-// import Projects from '@/pages/Projects'
-// import Contact from '@/pages/Contact'
+import HomePage from '@/pages/HomePage'
+// import AboutPage from '@/pages/AboutPage'
+// import ProjectsPage from '@/pages/ProjectsPage'
+// import ContactPage from '@/pages/ContactPage'
 import NavBar from '@/components/Navbar/Navbar'
 
 export default {
    name: 'App',
    components: {
-      Home, 
-      // About, 
-      // Projects, 
-      // Contact, 
+      HomePage, 
+      // AboutPage, 
+      // ProjectsPage, 
+      // ContactPage, 
       NavBar
    },
    data: function() {
       return {
          navBarItems: [
             { label: "Home", href: "#home" },
-            { label: "About", href: "#foo" },
-            { label: "Projects", href: "#bar" },
-            { label: "Contact", href: "#baz" },
-            { label: "Resume", href: "#babar" }]
+            { label: "About", href: "#" },
+            { label: "Projects", href: "#" },
+            { label: "Contact", href: "#" },
+            { label: "Resume", href: "#" }]
       }
    }
 }
