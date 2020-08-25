@@ -1,8 +1,7 @@
 <template>
    <div>
-      <b-row class="intro">
-         <b-col><introduction /></b-col>
-      </b-row>
+      <div class="gap" />
+      <introduction />
    </div>
 </template>
 
@@ -19,8 +18,8 @@ export default {
 
 <style lang="scss" scoped>
 
-.intro {
-   top: 200px;
+.gap {
+   height: 300px;
 }
 
 </style>
