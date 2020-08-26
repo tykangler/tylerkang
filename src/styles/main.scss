@@ -1,11 +1,17 @@
-// Makes more sense to include bootstrap here instead of in JS code
+// Include Bootstrap Here
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index';
+
 // custom imports
 @import './background.scss';
+@import './fonts.scss';
 
-/* Install Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+* {
+   -webkit-font-smoothing: antialiased !important;
+   -moz-osx-font-smoothing: grayscale !important;
+   box-sizing: border-box !important;
+   color: #ffffff;
+}
 
 /* Classes for Theming:
 ** .callout
@@ -14,12 +20,6 @@
 ** .section-content
 ** .title
 */
-* {
-   -webkit-font-smoothing: antialiased !important;
-   -moz-osx-font-smoothing: grayscale !important;
-   box-sizing: border-box !important;
-   color: #ffffff;
-}
 
 .callout {
    font-weight: 900 !important;
@@ -29,24 +29,36 @@
    color: #ff7e7e !important;
 }
 
-.heading {
-
+.section-heading {
+   font-family: 'Source Sans Pro', 'sans-serif';
+   font-weight: 900;
+   font-size: 37px;
+   letter-spacing: 0.20em;
+   line-height: 80px;
 }
 
-.content {
-
+.section-content {
+   font-family: 'Montserrat';
+   font-weight: 400;
+   line-height: 40px;
+   font-size: 16px;
 }
 
 .title {
    text-transform: uppercase;
-   letter-spacing: .30em;
-   font-family: 'Source Code Pro', 'monospace';
-   font-weight: 700;
+   letter-spacing: .40em;
+   font-family: 'Source Sans Pro', 'sans-serif';
+   font-weight: 900;
    font-size: 37px;
-   font-style: normal;
+   line-height: 70px;
 }
 
 .title > * {
    font-weight: inherit;
+}
+
+.page {
+   @extend .mb-5;
+   min-height: 100vh !important;
 }
 

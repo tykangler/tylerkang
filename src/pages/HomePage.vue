@@ -1,8 +1,8 @@
 <template>
-   <div>
+   <b-container class="page">
       <div class="gap" />
       <introduction />
-   </div>
+   </b-container>
 </template>
 
 <script>

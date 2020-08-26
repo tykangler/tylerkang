@@ -1,18 +1,16 @@
 <template>
    <div>
       <!-- <navbar class="nav-bar" :items="navBarItems" /> -->
-      <b-container id="main">
-         <home-page id="home" />
-         <!-- <about-page id="about" /> -->
-         <!-- <projects-page id="projects" /> -->
-         <!-- <contact-page id="contact" /> -->
-      </b-container>
+      <home-page id="home" />
+      <about-page id="about" />
+      <!-- <projects-page id="projects" /> -->
+      <!-- <contact-page id="contact" /> -->
    </div>
 </template>
 
 <script>
 import HomePage from '@/pages/HomePage'
-// import AboutPage from '@/pages/AboutPage'
+import AboutPage from '@/pages/AboutPage'
 // import ProjectsPage from '@/pages/ProjectsPage'
 // import ContactPage from '@/pages/ContactPage'
 // import Navbar from '@/components/Navbar/Navbar'
@@ -21,10 +19,10 @@ export default {
    name: 'App',
    components: {
       HomePage, 
-      // AboutPage, 
+      AboutPage, 
       // ProjectsPage, 
       // ContactPage, 
-      // Navbar
+      // Navbar,
    },
    data: function() {
       return {
@@ -41,9 +39,9 @@ export default {
 
 <style lang="scss" scoped>
 
-.nav-bar {
-   bottom: 0px;
-   left: 100px;
-}
+// .nav-bar {
+//    bottom: 0px;
+//    left: 100px;
+// }
 
 </style>
