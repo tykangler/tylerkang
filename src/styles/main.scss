@@ -6,7 +6,7 @@
 @import './background.scss';
 @import './fonts.scss';
 
-* {
+body {
    -webkit-font-smoothing: antialiased !important;
    -moz-osx-font-smoothing: grayscale !important;
    box-sizing: border-box !important;
@@ -35,6 +35,10 @@
    font-size: 37px;
    letter-spacing: 0.20em;
    line-height: 80px;
+
+   & * {
+      font: inherit;
+   }
 }
 
 .section-content {
@@ -51,10 +55,10 @@
    font-weight: 900;
    font-size: 37px;
    line-height: 70px;
-}
 
-.title > * {
-   font-weight: inherit;
+   & * {
+      font: inherit;
+   }
 }
 
 .page {

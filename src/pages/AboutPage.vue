@@ -1,8 +1,11 @@
 <template>
    <b-container class="page">
       <b-row>
-         <b-col class="section-heading highlight">
-            <span class="d-block highlight">Analytically minded,</span> Creative at Heart
+         <b-col>
+            <header class="section-heading highlight">
+               <h2 class="mb-4">Analytically minded,</h2>
+               <h2>Creative at Heart</h2>
+            </header>
          </b-col>
       </b-row>
       <hr class="divider my-5">
