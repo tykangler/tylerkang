@@ -3,8 +3,13 @@
 </template>
 
 <script>
+import Project from '@/components/Project';
+
 export default {
-   name: "ProjectsPage"
+   name: "ProjectsPage",
+   components: {
+      Project
+   }
 }
 </script>
 

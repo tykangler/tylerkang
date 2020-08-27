@@ -1,4 +1,4 @@
-<template>
+<template functional>
    <b-container class="page">
       <b-row>
          <b-col>
