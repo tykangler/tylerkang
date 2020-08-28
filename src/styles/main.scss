@@ -1,16 +1,17 @@
 // Include Bootstrap Here
-@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/bootstrap-vue/src/index';
+@import '~bootstrap';
+@import '~bootstrap-vue';
 
 // custom imports
 @import './background.scss';
 @import './fonts.scss';
+@import './common/_constants';
 
 body {
    -webkit-font-smoothing: antialiased !important;
    -moz-osx-font-smoothing: grayscale !important;
    box-sizing: border-box !important;
-   color: #ffffff;
+   color: $base-color;
 }
 
 /* Classes for Theming:
@@ -19,6 +20,8 @@ body {
 ** .section-heading
 ** .section-content
 ** .title
+** .project-title
+** .project-content
 */
 
 .callout {
@@ -26,34 +29,38 @@ body {
 }
 
 .highlight {
-   color: #ff7e7e !important;
+   color: $accent-color !important;
 }
 
-.section-heading {
-   font-family: 'Source Sans Pro', 'sans-serif';
-   font-weight: 900;
-   font-size: 37px;
-   letter-spacing: 0.20em;
-   line-height: 80px;
+// section styles 
+.section {
+   &-heading {
+      @extend .callout;
+      font-family: $heading-font;
+      font-size: 2.3125rem;
+      letter-spacing: 0.20em;
+      line-height: 80px;
+      text-transform: capitalize;
 
-   & * {
-      font: inherit;
+      & * {
+         font: inherit;
+      }
+   }
+
+   &-content {
+      font-family: $content-font;
+      font-weight: 400;
+      line-height: 40px;
+      font-size: 1.15rem;
    }
 }
 
-.section-content {
-   font-family: 'Montserrat';
-   font-weight: 400;
-   line-height: 40px;
-   font-size: 16px;
-}
-
 .title {
+   @extend .callout;
    text-transform: uppercase;
    letter-spacing: .40em;
-   font-family: 'Source Sans Pro', 'sans-serif';
-   font-weight: 900;
-   font-size: 37px;
+   font-family: $heading-font;
+   font-size: 2.3125rem;
    line-height: 70px;
 
    & * {
@@ -63,6 +70,31 @@ body {
 
 .page {
    @extend .mb-5;
+   height: auto;
    min-height: 100vh !important;
 }
+
+.divider {
+   transform: translateX(-20px);
+   height: 1.5px;
+   width: 95%;
+   margin-left: 0;
+   border-radius: 10px 10px 10px 10px;
+   background-color: rgb(216, 216, 216);
+}
+
+.project {
+   &-title {
+      @extend .callout;
+      font: {
+         family: 'Source Sans Pro', 'sans-serif';
+         size: 2rem;
+      }
+   }
+
+   &-content {
+      @extend .section-content;
+   }
+}
+
 

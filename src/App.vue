@@ -3,7 +3,7 @@
       <!-- <navbar class="nav-bar" :items="navBarItems" /> -->
       <home-page id="home" />
       <about-page id="about" />
-      <!-- <projects-page id="projects" /> -->
+      <projects-page id="projects" />
       <!-- <contact-page id="contact" /> -->
    </div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 import HomePage from '@/pages/HomePage'
 import AboutPage from '@/pages/AboutPage'
-// import ProjectsPage from '@/pages/ProjectsPage'
+import ProjectsPage from '@/pages/ProjectsPage'
 // import ContactPage from '@/pages/ContactPage'
 // import Navbar from '@/components/Navbar/Navbar'
 
@@ -20,7 +20,7 @@ export default {
    components: {
       HomePage, 
       AboutPage, 
-      // ProjectsPage, 
+      ProjectsPage, 
       // ContactPage, 
       // Navbar,
    },

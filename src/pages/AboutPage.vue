@@ -3,15 +3,15 @@
       <b-row>
          <b-col>
             <header class="section-heading highlight">
-               <h2 class="mb-4">Analytically minded,</h2>
-               <h2>Creative at Heart</h2>
+               <h2 class="mb-4 d-inline">Analytically minded, </h2>
+               <h2 class="d-inline">Creative at Heart</h2>
             </header>
          </b-col>
       </b-row>
       <hr class="divider my-5">
       <b-row>
          <b-col>
-            <p class="section-content">
+            <p class="section-content ml-lg-5 ml-0">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum tempor maximus. 
                Suspendisse potenti. Nulla justo velit, pretium vitae urna ac, 
                blandit aliquet lacus. Nulla pharetra, enim quis imperdiet suscipit, 
@@ -30,18 +30,3 @@ export default {
    name: "AboutPage",
 }
 </script>
-
-<style lang="scss" scoped>
-
-.divider {
-   transform: translateX(-30px);
-   height: 3px;
-   border-radius: 10px 10px 10px 10px;
-   background-color: rgb(216, 216, 216);
-}
-
-.section-content {
-   margin-left: 70px;
-}
-
-</style>
