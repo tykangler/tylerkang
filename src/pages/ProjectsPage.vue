@@ -6,14 +6,18 @@
          </b-col>
       </b-row>
       <!-- <hr class="divider my-5" /> -->
-      <b-row v-for="{ title, content, href, tags } of projects" :key="title">
-         <b-col>
-            <project class="project ml-5" :title="title" :href="href" :tags="tags">
+      <b-row >
+         <b-col lg="6" v-for="{ title, content, href, tags } of projects" :key="title">
+            <project class="project ml-lg-5" :title="title" :href="href" :tags="tags">
                {{ content }}
             </project>
          </b-col>
       </b-row>
-      <b-button class="ml-5">My Resume Here</b-button>
+      <b-row>
+         <b-col class="text-center">
+            <b-button href="../assets/TylerKangResume.pdf" variant="success">Resume</b-button>
+         </b-col>
+      </b-row>
    </b-container>
 </template> 
 
@@ -68,10 +72,6 @@ export default {
 
 .project {
    margin-bottom: 100px;
-}
-
-.page {
-   margin-bottom: 100px !important;
 }
 
 </style>

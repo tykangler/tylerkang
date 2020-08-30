@@ -1,10 +1,15 @@
 <template>
-   <div>
-      <!-- <navbar class="nav-bar" :items="navBarItems" /> -->
-      <home-page id="home" />
-      <about-page id="about" />
-      <projects-page id="projects" />
-      <contact-page id="contact" />
+   <div id="app" class="parallax-container">
+      <main class="parallax-layer-0">
+         <home-page id="home" />
+         <about-page id="about" />
+         <projects-page id="projects" />
+         <contact-page id="contact" />
+      </main>
+      <div id="background" />
+      <div id="small-stars" class="parallax-layer-3" />
+      <div id="medium-stars" class="parallax-layer-2" />
+      <div id="large-stars" class="parallax-layer-1" />
    </div>
 </template>
 
