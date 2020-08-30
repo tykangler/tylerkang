@@ -1,6 +1,6 @@
 <template functional>
    <b-container class="page">
-      <b-row>
+      <b-row :style="{ marginBottom: '50px' }">
          <b-col>
             <header class="section-heading highlight">
                <h2 class="mb-4 d-inline">Analytically minded, </h2>
@@ -8,7 +8,7 @@
             </header>
          </b-col>
       </b-row>
-      <hr class="divider my-5">
+      <!-- <hr class="divider my-5"> -->
       <b-row>
          <b-col>
             <p class="section-content ml-lg-5 ml-0">

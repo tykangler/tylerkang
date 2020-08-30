@@ -1,11 +1,11 @@
 <template>
    <b-container class="page">
-      <b-row>
+      <b-row :style="{ marginBottom: '50px' }">
          <b-col>
-            <h2 class="section-heading highlight">A few of my personal projects</h2>
+            <h2 class="section-heading">A few of my personal projects</h2>
          </b-col>
       </b-row>
-      <hr class="divider my-5" />
+      <!-- <hr class="divider my-5" /> -->
       <b-row v-for="{ title, content, href, tags } of projects" :key="title">
          <b-col>
             <project class="project ml-5" :title="title" :href="href" :tags="tags">
@@ -13,6 +13,7 @@
             </project>
          </b-col>
       </b-row>
+      <b-button class="ml-5">My Resume Here</b-button>
    </b-container>
 </template> 
 
@@ -67,6 +68,10 @@ export default {
 
 .project {
    margin-bottom: 100px;
+}
+
+.page {
+   margin-bottom: 100px !important;
 }
 
 </style>

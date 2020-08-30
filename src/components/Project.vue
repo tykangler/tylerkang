@@ -1,5 +1,5 @@
 <template>
-   <div class="project-item shadow">
+   <div class="project-item d-inline-block">
       <a :href="href" class="project-link">
          <h3 class="project-title"> 
             {{ title }} 
@@ -7,11 +7,10 @@
          <p class="project-content">
             <slot />
          </p>
-         <h4>
-            <b-badge pill variant="primary" class="mr-2" v-for="tag in tags" :key="tag"> 
-               {{ tag }} 
-            </b-badge>
-         </h4>
+         <b-badge class="project-tag mr-2" 
+                  v-for="tag in tags" :key="tag"> 
+            {{ tag }} 
+         </b-badge>
       </a>
    </div>
 </template>
@@ -46,7 +45,6 @@ export default {
 .project {
    &-item {
       position: relative;
-      width: 70%;
       transition: transform ($transition-speed * 2.5);
 
       &:hover {
@@ -60,13 +58,7 @@ export default {
 
       &:hover {
          color: rgba($base-color, 0.85);
-         text-decoration: inherit;
-      }
-   }
-
-   @include media-breakpoint-down (sm) {
-      &-item {
-         width: 100%;
+         text-decoration: none;
       }
    }
 }

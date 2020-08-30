@@ -4,7 +4,7 @@
       <home-page id="home" />
       <about-page id="about" />
       <projects-page id="projects" />
-      <!-- <contact-page id="contact" /> -->
+      <contact-page id="contact" />
    </div>
 </template>
 
@@ -12,7 +12,7 @@
 import HomePage from '@/pages/HomePage'
 import AboutPage from '@/pages/AboutPage'
 import ProjectsPage from '@/pages/ProjectsPage'
-// import ContactPage from '@/pages/ContactPage'
+import ContactPage from '@/pages/ContactPage'
 // import Navbar from '@/components/Navbar/Navbar'
 
 export default {
@@ -21,7 +21,7 @@ export default {
       HomePage, 
       AboutPage, 
       ProjectsPage, 
-      // ContactPage, 
+      ContactPage, 
       // Navbar,
    },
    data: function() {
@@ -31,7 +31,11 @@ export default {
             { label: "About", href: "#" },
             { label: "Projects", href: "#" },
             { label: "Contact", href: "#" },
-            { label: "Resume", href: "#" }]
+            { label: "Resume", href: "#" }
+         ],
+         contactLinks: [
+            { label: "Linked In"}
+         ]
       }
    }
 }

@@ -12,14 +12,15 @@ body {
    -moz-osx-font-smoothing: grayscale !important;
    box-sizing: border-box !important;
    color: $base-color;
+   font-family: $content-font;
 }
 
 /* Classes for Theming:
 ** .callout
 ** .highlight
+** .title
 ** .section-heading
 ** .section-content
-** .title
 ** .project-title
 ** .project-content
 */
@@ -29,13 +30,14 @@ body {
 }
 
 .highlight {
-   color: $accent-color !important;
+   color: $accent-color;
 }
 
 // section styles 
 .section {
    &-heading {
       @extend .callout;
+      @extend .highlight;
       font-family: $heading-font;
       font-size: 2.3125rem;
       letter-spacing: 0.20em;
@@ -48,7 +50,6 @@ body {
    }
 
    &-content {
-      font-family: $content-font;
       font-weight: 400;
       line-height: 40px;
       font-size: 1.15rem;
@@ -87,13 +88,23 @@ body {
    &-title {
       @extend .callout;
       font: {
-         family: 'Source Sans Pro', 'sans-serif';
+         family: $heading-font;
          size: 2rem;
       }
    }
 
    &-content {
       @extend .section-content;
+      font-size: 1rem;
+   }
+
+   &-tag {
+      text-transform: uppercase;
+      border: {
+         color: #ff7e7e;
+         style: solid;
+      }
+      background-color: transparent !important;
    }
 }
 
