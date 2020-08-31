@@ -1,0 +1,15 @@
+@use 'variables';
+
+@function parallax-scale-factor($perspective, $z-distance) {
+   @return ($perspective - $z-distance) / $perspective;
+}
+
+@function generate-stars($n) {
+   $value: '#{random(variables.$max-height)}px #{random(variables.$max-height)}px #FFF';
+   @for $i from 2 through $n {
+      $value: '#{$value}, \
+               #{random(variables.$max-height)}px \
+               #{random(variables.$max-height)}px #FFF';
+   }   
+   @return unquote($value);
+}   

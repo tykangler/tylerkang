@@ -1,4 +1,5 @@
-$max-height: 4252px;
+@use '../common/_functions';
+@use '../common/variables';
 
 // background color
 
@@ -6,7 +7,7 @@ $max-height: 4252px;
    position: absolute;
    top: 0;
    left: 0;
-   height: $max-height;
+   height: variables.$max-height;
    width: 100%;
    z-index: -9999;
    background-image: 
@@ -17,23 +18,11 @@ $max-height: 4252px;
    }      
    
    
-@function parallax-scale-factor($perspective, $z-distance) {
-   @return ($perspective - $z-distance) / $perspective;
-}
-
-@function generate-stars($n) {
-   $value: '#{random($max-height)}px #{random($max-height)}px #FFF';
-   @for $i from 2 through $n {
-      $value: '#{$value}, #{random($max-height)}px #{random($max-height)}px #FFF';
-   }   
-   @return unquote($value);
-}   
-
 // star generation
 
-$all-small-stars: generate-stars(700);
-$all-medium-stars: generate-stars(200);
-$all-large-stars: generate-stars(100);
+$all-small-stars: functions.generate-stars(700);
+$all-medium-stars: functions.generate-stars(200);
+$all-large-stars: functions.generate-stars(100);
 
 #small-stars {
    width: 1px;
@@ -46,7 +35,7 @@ $all-large-stars: generate-stars(100);
    
    &::after {
       position: absolute;
-      top: $max-height;
+      top: variables.$max-height;
       width: 1px;
       height: 1px;
       background: transparent;
@@ -65,7 +54,7 @@ $all-large-stars: generate-stars(100);
    
    &::after {
       position: absolute;
-      top: $max-height;
+      top: variables.$max-height;
       width: 1px;
       height: 1px;
       background: transparent;
@@ -84,7 +73,7 @@ $all-large-stars: generate-stars(100);
    
    &::after {
       position: absolute;
-      top: $max-height;
+      top: variables.$max-height;
       width: 1px;
       height: 1px;
       background: transparent;
@@ -116,7 +105,8 @@ $perspective: 10px;
          bottom: 0;
          left: 0;
          $z-dist: -2 * $i + 0px;
-         transform: translateZ($z-dist) scale(parallax-scale-factor($perspective, $z-dist));
+         transform: translateZ($z-dist) 
+                    scale(functions.parallax-scale-factor($perspective, $z-dist));
       }
    }
 }

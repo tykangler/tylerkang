@@ -1,0 +1,10 @@
+@use '../common/variables';
+
+body {
+   -webkit-font-smoothing: antialiased !important;
+   -moz-osx-font-smoothing: grayscale !important;
+   box-sizing: border-box !important;
+   color: variables.$base-color;
+   font-family: variables.$content-font;
+
+}

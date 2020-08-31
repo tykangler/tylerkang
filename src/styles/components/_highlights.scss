@@ -1,0 +1,9 @@
+@use '../common/variables';
+
+.callout {
+   font-weight: 900 !important;
+}
+
+.highlight {
+   color: variables.$accent-color;
+}

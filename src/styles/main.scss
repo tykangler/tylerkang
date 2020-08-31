@@ -1,15 +1,19 @@
 // custom imports
-@use './background.scss';
-@use './fonts.scss';
-@use './common/_constants';
+@use 'common/fonts';
+@use 'common/functions';
+@use 'common/variables';
 
-body {
-   -webkit-font-smoothing: antialiased !important;
-   -moz-osx-font-smoothing: grayscale !important;
-   box-sizing: border-box !important;
-   color: constants.$base-color;
-   font-family: constants.$content-font;
-}
+@use 'components/background';
+@use 'components/project';
+@use 'components/page';
+@use 'components/divider';
+@use 'components/section';
+@use 'components/title';
+
+@use 'base/base';
+
+@use 'pages/contact';
+@use 'pages/home';
 
 /* Classes for Theming:
 ** .callout
@@ -20,88 +24,3 @@ body {
 ** .project-title
 ** .project-content
 */
-
-.callout {
-   font-weight: 900 !important;
-}
-
-.highlight {
-   color: constants.$accent-color;
-}
-
-// section styles 
-.section {
-   &-heading {
-      @extend .callout;
-      @extend .highlight;
-      font-family: constants.$heading-font;
-      font-size: 2.3125rem;
-      letter-spacing: 0.20em;
-      line-height: 80px;
-      text-transform: capitalize;
-
-      & * {
-         font: inherit;
-      }
-   }
-
-   &-content {
-      font-weight: 400;
-      line-height: 40px;
-      font-size: 1.15rem;
-   }
-}
-
-.title {
-   @extend .callout;
-   text-transform: uppercase;
-   letter-spacing: .40em;
-   font-family: constants.$heading-font;
-   font-size: 2.3125rem;
-   line-height: 70px;
-
-   & * {
-      font: inherit;
-   }
-}
-
-.page {
-   margin-bottom: 250px;
-   height: auto;
-   min-height: 100vh !important;
-}
-
-.divider {
-   transform: translateX(-20px);
-   height: 1.5px;
-   width: 95%;
-   margin-left: 0;
-   border-radius: 10px 10px 10px 10px;
-   background-color: rgb(216, 216, 216);
-}
-
-.project {
-   &-title {
-      @extend .callout;
-      font: {
-         family: constants.$heading-font;
-         size: 2rem;
-      }
-   }
-
-   &-content {
-      @extend .section-content;
-      font-size: 1rem;
-   }
-
-   &-tag {
-      text-transform: uppercase;
-      border: {
-         color: #ff7e7e;
-         style: solid;
-      }
-      background-color: transparent !important;
-   }
-}
-
-
