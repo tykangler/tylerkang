@@ -1,10 +1,9 @@
 <template>
-   <span class="nav-dot d-inline-block" 
-         :style="[backgroundStyle, sizeStyle, borderStyle]" />
+   <span :class="['nav-dot', 'd-inline-block', { 'expand': expand }]" 
+         :style="[sizeStyle, borderStyle]" />
 </template>
 
 <script>
-import chroma from "chroma-js"
 
 export default {
    name: "Navdot",
@@ -26,11 +25,6 @@ export default {
       },
    },
    computed: {
-      backgroundStyle: function() {
-         return {
-            backgroundColor: chroma(this.color).alpha(0.7).css()
-         }
-      },
       sizeStyle: function() {
          return {
             width: this.radius * 2 + 'em',
@@ -39,7 +33,6 @@ export default {
       }, 
       borderStyle: function() {
          return {
-            borderColor: chroma(this.color).alpha(this.expand ? 1 : 0).css(),
             borderWidth: this.radius / 3.3 + 'em'
          }
       }
@@ -55,5 +48,12 @@ export default {
    transition: all $transition-speed;
    border-style: solid;
    background-clip: padding-box;
+   background-color: rgba(#fff, 0.7);
+   border-color: rgba(#fff, 0);
 }
+
+.nav-dot.expand {
+   border-color: rgba(#fff, 1);
+}
+
 </style>
