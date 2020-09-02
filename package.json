@@ -1,0 +1,19 @@
+{
+  "name": "tylernkang",
+  "version": "1.0.0",
+  "description": "My Personal Website",
+  "scripts": {
+    "dev": "python -m http.server --directory src/",
+    "build": "sass src/styles/main.scss src/styles/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tykangler/tylernkang.git"
+  },
+  "author": "Tyler Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tykangler/tylernkang/issues"
+  },
+  "homepage": "https://github.com/tykangler/tylernkang#readme"
+}

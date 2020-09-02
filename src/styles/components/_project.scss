@@ -2,6 +2,19 @@
 @use 'highlights';
 @use 'section';
 
+// bootstrap overrides
+
+.card {
+   background: initial;
+   border: initial;
+}
+
+.card-columns {
+   column-count: 2;
+}
+
+// styles
+
 .project {
    &-title {
       @extend .callout;
@@ -26,11 +39,11 @@
    }
 
    &-item {
-      position: relative;
       transition: transform (variables.$transition-speed * 2.5);
       color: inherit;
       text-decoration: none;
       margin-bottom: 100px;
+      display: inline-block;
 
       &:hover {
          transform: scale(1.02);
