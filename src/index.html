@@ -5,177 +5,235 @@
       <meta name="author" content="Tyler Kang">
       <meta name="description" content="This is my personal website. Feel free to offer suggestions.">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="shortcut icon" href="assets/rocket.png">
       <link rel="stylesheet" 
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
             crossorigin="anonymous">
       <link rel="stylesheet" href="styles/css/main.css">
-      <title>It's Tyler!</title>
+      <title>Tyler Kang!</title>
    </head>
-   <body>
-      <div class="parallax-container">
-         <div id="navbar"></div>
-         <div id="background"></div>
-         <div id="small-stars" class="parallax-layer-3"></div>
-         <div id="medium-stars" class="parallax-layer-2"></div>
-         <div id="large-stars" class="parallax-layer-1"></div>
-         <main id="main-content" class="container parallax-layer-0">
-            <section id="home-page" class="page">
-               <div class="gap"></div>
-               <header class="title d-inline-block position-relative">
-                  <h1 class="mb-3">Hey, I'm <span class="highlight">Tyler!</span></h1>
-                  <h1>A <span class="highlight">Whatever</span></h1>
-               </header>
-            </section>
-            <section id="about-page" class="page">
-               <div class="row" style="margin-bottom: 50px">
-                  <div class="col">
-                     <header class="section-heading highlight">
-                        <h2 class="mb-4 d-inline">Analytically minded, </h2>
-                        <h2 class="d-inline">Creative at Heart</h2>
-                     </header>
-                  </div>
+   <body id="background">
+      <hr class="bar">
+      <nav class="navigation scrollspy">
+         <div class="nav-item">
+            <p class="nav-text">Home</p>
+            <a href="#home" class="nav-dot" aria-label="Home"></a>
+         </div>
+         <div class="nav-item">
+            <p class="nav-text">About</p>
+            <a href="#about" class="nav-dot" aria-label="About"></a>
+         </div>
+         <div class="nav-item">
+            <p class="nav-text">Projects</p>
+            <a href="#projects" class="nav-dot" aria-label="Projects"></a>
+         </div>
+         <div class="nav-item">
+            <p class="nav-text">Contact</p>
+            <a href="#contact" class="nav-dot" aria-label="Contact"></a>
+         </div>
+      </nav>
+      <div id="small-stars" class="parallax-layer-3"></div>
+      <div id="medium-stars" class="parallax-layer-2"></div>
+      <img id="home-blob" src="assets/home-blob.svg" height="800" width="800">
+      <main id="main-content" class="container parallax-layer-0">
+         <section id="home" class="page">
+            <header class="title d-inline-block position-relative">
+               <h1 class="mb-3">Hey, I'm <span class="highlight">Tyler!</span></h1>
+               <h1>A <span class="highlight">Whatever</span></h1>
+            </header>
+         </section>
+         <section id="about" class="page">
+            <div class="row" style="margin-bottom: 50px">
+               <div class="col">
+                  <header class="section-heading highlight">
+                     <h2 class="mb-4 d-inline">Analytically minded, </h2>
+                     <h2 class="d-inline">Creative at Heart</h2>
+                  </header>
                </div>
-               <div class="row">
-                  <div class="col">
-                     <p class="section-content" style="padding: 1.25rem">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum tempor maximus. 
-                        Suspendisse potenti. Nulla justo velit, pretium vitae urna ac, 
-                        blandit aliquet lacus. Nulla pharetra, enim quis imperdiet suscipit, 
-                        purus risus consectetur libero, sit amet bibendum ipsum magna in eros. 
-                        Mauris sollicitudin lectus urna, sollicitudin ultrices nisl ullamcorper sit amet. 
-                        Cras porta leo et est laoreet rhoncus. Cras non nisi eu leo convallis pharetra 
-                        vitae quis diam.
-                     </p>
-                  </div>
+            </div>
+            <div class="row">
+               <div class="col">
+                  <p class="section-content">
+                     I'm a finance student at the University of Washington Foster School of Business.
+                     My personal passion is computer science, and I am mostly self-taught. In the 
+                     future, I hope to use both of these skills in my work and create the first 
+                     intergalactic trade federation. 
+                  </p>
                </div>
-            </section>
-            <section id="projects-page" class="page">
-               <div class="row" style="margin-bottom: 50px">
-                  <div class="col">
-                     <h2 class="section-heading">A few of my personal projects</h2>
-                  </div>
+            </div>
+         </section>
+         <section id="projects" class="page">
+            <div class="row" style="margin-bottom: 50px">
+               <div class="col">
+                  <h2 class="section-heading">A few of my projects</h2>
                </div>
-               <div class="row">
-                  <div class="col">
-                     <div class="card-columns">
-                        <div class="card">
-                           <a class="card-body project-item">
-                              <h3 class="card-title project-title">
-                                 Foo
-                              </h3>
-                              <p class="project-content card-text">
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-                              </p>
-                              <span class="project-tag badge mr-2 card-text">Foo</span>
-                              <span class="project-tag badge mr-2 card-text">Bar</span>
-                              <span class="project-tag badge mr-2 card-text">Baz</span>
-                           </a>
-                        </div>
-                        <div class="card">
-                           <a class="card-body project-item">
-                              <h3 class="card-title project-title">
-                                 Foo
-                              </h3>
-                              <p class="project-content card-text">
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              </p>
-                              <span class="project-tag badge mr-2 card-text">Foo</span>
-                              <span class="project-tag badge mr-2 card-text">Bar</span>
-                              <span class="project-tag badge mr-2 card-text">Baz</span>
-                           </a>
-                        </div>
-                        <div class="card">
-                           <a class="card-body project-item">
-                              <h3 class="card-title project-title">
-                                 Foo
-                              </h3>
-                              <p class="project-content card-text">
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-                              </p>
-                              <span class="project-tag badge mr-2 card-text">Foo</span>
-                              <span class="project-tag badge mr-2 card-text">Bar</span>
-                              <span class="project-tag badge mr-2 card-text">Baz</span>
-                           </a>
-                        </div>
-                        <div class="card">
-                           <a class="card-body project-item">
-                              <h3 class="card-title project-title">
-                                 Foo
-                              </h3>
-                              <p class="project-content card-text">
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                              </p>
-                              <span class="project-tag badge mr-2 card-text">Foo</span>
-                              <span class="project-tag badge mr-2 card-text">Bar</span>
-                              <span class="project-tag badge mr-2 card-text">Baz</span>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col text-center">
-                     <a class="btn btn-success" href="assets/TylerKangResume.pdf">
-                        Resume
+            </div>
+            <div class="row">
+               <div class="col">
+                  <div class="project-container">
+                     <a class="project-item" rel="noopener" 
+                        href="https://github.com/tykangler/search-engine">
+                        <h3 class="project-title">
+                           Search Engine
+                        </h3>
+                        <p class="project-content">
+                           A rudimentary search engine using a graph implementation of Larry Page's
+                           PageRank algorithm to sort search results.
+                           <br>
+                           <span class="callout highlight">
+                              Source not posted in accordance with UW academic policy.
+                           </span>
+                        </p>
+                        <span class="project-tag badge mr-2">Java</span>
+                        <span class="project-tag badge mr-2">PageRank</span>
+                        <span class="project-tag badge mr-2">Coursework</span>
+                     </a>
+                     <a class="project-item" rel="noopener" 
+                        href="https://github.com/tykangler/scheduler" target="_blank">
+                        <h3 class="project-title">
+                           Concurrent Task Scheduler
+                        </h3>
+                        <p class="project-content">
+                           A task scheduling library. The task scheduler runs tasks concurrently 
+                           on a threadpool when possible. Tasks may be given dependencies, only
+                           allowing them to run when another task is finished. Tasks are stored in
+                           a <span class="highlight callout">lock-free work-stealing</span> queue. 
+                           <br>
+                           <span class="callout highlight">
+                              This project was for learning purposes, not for use in production.
+                           </span>
+                        </p>
+                        <span class="project-tag badge mr-2">C++</span>
+                        <span class="project-tag badge mr-2">Concurrency</span>
+                        <span class="project-tag badge mr-2">Personal</span>
+                     </a>
+                     <a class="project-item" rel="noopener" 
+                        href="https://github.com/tykangler/maze-solver">
+                        <h3 class="project-title">
+                           Maze Creator + Solver
+                        </h3>
+                        <p class="project-content">
+                           Implements Kruskal's Minimum Spanning Tree algorithm to generate a 
+                           solveable maze, and Djikstra's shortest path algorithm to find the 
+                           shortest solution to the maze.
+                           <br>
+                           <span class="callout highlight">
+                              Source not posted in accordance with UW accademic policy.
+                           </span>
+                        </p>
+                        <span class="project-tag badge mr-2">Java</span>
+                        <span class="project-tag badge mr-2">Shortest Path</span>
+                        <span class="project-tag badge mr-2">Coursework</span>
+                     </a>
+                     <a class="project-item" rel="noopener" 
+                        href="https://github.com/tykangler/sudoku-solver">
+                        <h3 class="project-title">
+                           Sudoku Solver
+                        </h3>
+                        <p class="project-content">
+                           Implements recursive backtracking to solve a sudoku board. Game board
+                           is created using a text input file, providing pre filled values.
+                        </p>
+                        <span class="project-tag badge mr-2">C++</span>
+                        <span class="project-tag badge mr-2">Recursive Backtracking</span>
+                        <span class="project-tag badge mr-2">Personal</span>
+                     </a>
+                     <a class="project-item" rel="noopener" 
+                        href="https://github.com/tykangler/searcher">
+                        <h3 class="project-title">
+                           Fuzzy String Matcher
+                        </h3>
+                        <p class="project-content">
+                           A fuzzy string searcher that allows the user to type in a search
+                           parameter, and returns approximate string matches. Uses Peter Norvig's
+                           spell checking algorithm, along with a Longest Common Substring algorithm
+                           to calculate edit distance.
+                        </p>
+                        <span class="project-tag badge mr-2">C++</span>
+                        <span class="project-tag badge mr-2">Pattern Matching</span>
+                        <span class="project-tag badge mr-2">Personal</span>
+                     </a>
+                     <a class="project-item" rel="noopener" 
+                        href="https://github.com/tykangler/pitcher">
+                        <h3 class="project-title">
+                           Midi Player
+                        </h3>
+                        <p class="project-content">
+                           Reads input from a MIDI keyboard (or any MIDI device) and executes
+                           the appropriate action for the read MIDI input. For example, a MIDI 
+                           Note event outputs sound, and a Controller event changes the instrument.
+                        </p>
+                        <span class="project-tag badge mr-2">C#</span>
+                        <span class="project-tag badge mr-2">Device Read/Write</span>
+                        <span class="project-tag badge mr-2">Personal</span>
                      </a>
                   </div>
                </div>
-            </section>
-            <section id="contact-page" class="page">
-               <div style="height: 300px;"></div>
-               <div class="row">
-                  <div id="contact-message" class="section-heading col-md-6">
-                     <h3>I'm bored, and I need a job.</h3>
-                     <h3 class="plain">Contact me 
-                        <a id="email" href="mailto:tyler.n.kang@outlook.com" target="_blank">Here.</a>
-                     </h3>
-                  </div>
-                  <div id="contact-links" class="col-md-6">
-                     <p class="ml-5 mb-2"> 
-                        Email: tyler.n.kang@outlook.com
-                     </p>
-                     <p class="ml-5 mb-2">
-                        Phone: 425-314-2399
-                     </p> 
-                  </div>
+            </div>
+            <div class="row">
+               <div class="col text-center">
+                  <a class="work-details-button" rel="noopener"
+                     href="https://github.com/tykangler?tab=repositories">
+                     More works
+                  </a>
+                  <a class="work-details-button" href="assets/TylerKangResume.pdf">
+                     Resume
+                  </a>
                </div>
-               <div style="height: 100px;"></div>
-            </section>
-         </main>
-      </div>
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
-              integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
-              crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
-              integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
-              crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
-              integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
-              crossorigin="anonymous"></script>
-      <script>
-         $(document).ready(
-            () => $('#background').height($('#main-content').height()));
-         $(window).resize(
-            () => $('#background').height($('#main-content').height())
-         )
-      </script>
+            </div>
+         </section>
+         <section id="contact" class="pb-5">
+            <div class="row" >
+               <div id="contact-message" class="section-heading col-lg-6 mb-3">
+                  <h3>Let me contribute to your work.</h3>
+                  <h3 class="plain">See my
+                     <a id="contact-resume" 
+                        href="assets/TylerKangResume.pdf" 
+                        target="_blank">
+                        Resume
+                     </a>
+                     for More
+                  </h3>
+               </div>
+               <div class="col pt-4">
+                  <p class="ml-lg-5 mb-3 contact-link"> 
+                     Email: tyler.n.kang@outlook.com
+                  </p>
+                  <p class="ml-lg-5 mb-3 contact-link">
+                     Phone: 425-314-2399
+                  </p>
+                  <a href="https://www.linkedin.com/in/tyler-n-kang/" 
+                     class="contact-link ml-lg-5 mb-3">
+                     <img src="assets/linkedinicon.svg" alt="LinkedIn" 
+                          width="30" height="30" >
+                  </a>
+                  <a href="https://www.github.com/tykangler" 
+                     class="contact-link ml-2 mb-3">
+                     <img src="assets/githubicon.svg" alt="Github"
+                          width="30" height="30" >
+                  </a>
+               </div>
+            </div>
+         </section>
+      </main>
+      <!-- <footer class="mb-4" style="margin-left: 10px; margin-top: 100px;">
+         <small>
+            LinkedIn icon made by 
+            <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">
+               Pixel Buddha
+            </a> from 
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+         </small>
+         <span class="mx-2">&bullet;</span>
+         <small>
+            Github icon made by 
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+               Freepik
+            </a> from 
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+         </small>
+      </footer> -->
+      <script src="js/main.js"></script>
    </body>
 </html>

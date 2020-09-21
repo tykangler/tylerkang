@@ -2,9 +2,9 @@
   "name": "tylernkang",
   "version": "1.0.0",
   "description": "My Personal Website",
+  "private": true,
   "scripts": {
-    "dev": "python -m http.server --directory src/",
-    "build": "sass src/styles/main.scss src/styles/css/main.css"
+    "serve": "python server.py"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/tykangler/tylernkang/issues"
   },
-  "homepage": "https://github.com/tykangler/tylernkang#readme"
+  "homepage": "https://github.com/tykangler/tylernkang#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
 }
