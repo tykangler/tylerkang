@@ -1,24 +1,7 @@
 # tylernkang
 
-## Project setup
-```
-npm install
-```
+## About
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This website was created as a personal brand / portfolio showcase, as well as a way for me to 
+practice web development. I started with vue.js, but I realized it as a little heavy for a project
+as simple as this, and switched over to regular HTML, CSS, and minimal javascript. 
