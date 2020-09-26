@@ -50,23 +50,16 @@
 }
 
 .work-details-button {
-   border: {
-      color: variables.$accent-color;
-      style: solid;
-      width: 2px;
-      radius: 4px 4px 4px 4px;
-   }
    display: inline-block;
    padding: 5px 20px;
-   text-decoration: none;
+   text-decoration: underline;
    color: white;
    margin-bottom: 125px;
    transition: all variables.$transition-speed;
    width: 150px;
 
    &:hover {
-      text-decoration: none;
+      text-decoration: wavy;
       color: inherit;
-      background-color: rgba(variables.$accent-color, 0.4);
    }
 }

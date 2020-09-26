@@ -3,24 +3,24 @@
 // background styles
 
 #background {
+   // background-color: black;
    background-image: 
-   linear-gradient(180deg, 
-   #131214 0%, #121113 12.16%, 
-   #42272c 32.28%, #3C3126 65.1%, 
-   #1F1A20 85.49%, #131B1B 100%);
+      url('../../assets/small_stars.svg'),
+      url('../../assets/medium_stars.svg'),
+      linear-gradient(180deg, 
+      #1a141a 0%, #1c191f 12.16%, 
+      #42272c 32.28%, #3C3126 65.1%, 
+      #1F1A20 85.49%, #131B1B 100%);
+   
+   background-repeat: repeat, repeat-y, no-repeat;
 }   
 
-// star styles
-
-@function generate-stars($n) {
-   $value: '#{random(ceil(variables.$max-height))}px #{random(ceil(variables.$max-height))}px #FFF';
-   @for $i from 2 through $n {
-      $value: '#{$value}, \
-               #{random(variables.$max-height)}px \
-               #{random(variables.$max-height)}px #FFF';
-   }   
-   @return unquote($value);
-}   
+.star-system {
+   position: absolute;
+   z-index: -100;
+   right: 1px;
+   transform: translateY(-150px);
+}
 
 /* ==================================== *\
 \* ------ Adjust these variables ------ */
@@ -28,58 +28,4 @@
 $perspective: 50px;
 $z-dist-factor: -10;
 
-$all-small-stars: generate-stars(350);
-$all-medium-stars: generate-stars(150);
-
 /* ====================================- */
-
-#small-stars {
-   width: 1px;
-   height: 1px;
-   background: transparent;
-   box-shadow: $all-small-stars;
-   position: absolute;
-}   
-
-#medium-stars {
-   width: 2px;
-   height: 2px;
-   background: transparent;
-   box-shadow: $all-medium-stars;
-   position: absolute;
-}      
-
-#home-blob {
-   position: absolute;
-   background-repeat: no-repeat;
-   overflow: visible visible;
-}
-
-// parallax -- layers are ordered from 0 - n, where 0 is the foreground, and n is the background.
-// foreground elements scroll faster than background elements.
-
-// @function parallax-scale-factor($perspective, $z-distance) {
-//    @return ($perspective - $z-distance) / $perspective;
-// }
-
-// .parallax-container {
-//    position: relative;
-//    height: 100vh;
-//    overflow-y: scroll;
-//    perspective: $perspective;
-//    perspective-origin: 50%;
-// }
-
-// @mixin parallax-layer-styles {
-//    @for $i from 0 through 3 {
-//       .parallax-layer-#{$i} {
-//          top: 0;
-//          left: 0;
-//          $z-dist: $z-dist-factor * $i + 0px;
-//          transform: translateZ($z-dist) 
-//                     scale(parallax-scale-factor($perspective, $z-dist));
-//       }
-//    }
-// }
-
-// @include parallax-layer-styles();

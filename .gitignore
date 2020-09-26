@@ -1,9 +1,17 @@
+# project mgmt
+
 node_modules
 __pycache__
 
 .vscode
 *.sln
 
+# markdown 
+
 *.md
 *.pdf
 !README.md
+
+# scripts
+
+*.py
