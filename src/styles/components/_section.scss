@@ -4,13 +4,13 @@
 // section styles 
 .section {
    &-heading {
-      @extend .callout;
       @extend .highlight;
       font-family: variables.$heading-font;
-      font-size: 4rem;
+      font-size: 3rem;
       letter-spacing: 0.20em;
       line-height: 100px;
       text-transform: capitalize;
+      font-weight: 400;
 
       & * {
          font: inherit;

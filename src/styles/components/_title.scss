@@ -2,14 +2,21 @@
 @use 'highlights';
 
 .title {
-   @extend .callout;
-   text-transform: capitalize;
-   letter-spacing: .25em;
+   font-weight: 400;
+   text-transform: uppercase;
+   letter-spacing: .30em;
    font-family: variables.$heading-font;
-   font-size: 5rem;
-   line-height: 6.25rem;
+   font-size: 3rem;
+   line-height: 5.25rem;
 
    & * {
       font: inherit;
    }
+}
+
+.adjective {
+   font-weight: 400;
+   font-size: 1.5rem;
+   text-transform: uppercase;
+   letter-spacing: .15rem;
 }

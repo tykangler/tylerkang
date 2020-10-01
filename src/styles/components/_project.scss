@@ -28,7 +28,7 @@
    }
 
    &-title {
-      @extend .callout;
+      // @extend .callout;
       font: {
          family: variables.$heading-font;
          size: 2rem;
@@ -46,6 +46,11 @@
          style: solid;
       }
       background-color: transparent !important;
+   }
+   
+   &-note {
+      @extend .highlight;
+      @extend .callout;
    }
 }
 
