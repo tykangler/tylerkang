@@ -5,52 +5,64 @@
       <meta name="author" content="Tyler Kang">
       <meta name="description" content="I'm Tyler, and I always wanted to be an astronaut.">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="shortcut icon" href="src/assets/cosmonaut.svg">
+      <link rel="shortcut icon" href="assets/cosmonaut.svg">
       <link rel="stylesheet" 
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
             crossorigin="anonymous">
-      <link rel="stylesheet" href="src/styles/css/main.css">
+      <link rel="stylesheet" href="styles/css/main.css">
       <title>Tyler Kang!</title>
    </head>
    <body id="background">
-      <hr class="bar">
       <nav class="navigation scrollspy">
-         <div class="nav-item">
-            <p class="nav-text">Home</p>
-            <a href="#home" class="nav-dot" aria-label="Home"></a>
-         </div>
-         <div class="nav-item">
-            <p class="nav-text">About</p>
-            <a href="#about" class="nav-dot" aria-label="About"></a>
-         </div>
-         <div class="nav-item">
-            <p class="nav-text">Projects</p>
-            <a href="#projects" class="nav-dot" aria-label="Projects"></a>
-         </div>
-         <div class="nav-item">
-            <p class="nav-text">Contact</p>
-            <a href="#contact" class="nav-dot" aria-label="Contact"></a>
-         </div>
+         <hr class="nav-bar">
+         <ul>
+            <li>
+               <a href="#home">
+                  <span class="nav-text">Home</span><span class="nav-dot"></span>
+               </a>
+            </li>
+            <li>
+               <a href="#about">
+                  <span class="nav-text">About</span><span class="nav-dot"></span>
+               </a>
+            </li>
+            <li>
+               <a href="#projects">
+                  <span class="nav-text">Projects</span><span class="nav-dot"></span>
+               </a>
+            </li>
+            <li>
+               <a href="#contact">
+                  <span class="nav-text">Contact</span><span class="nav-dot"></span>
+               </a>
+            </li>
+            <li>
+               <a href="./assets/TylerKangResume.pdf">
+                  <span class="nav-text">Resume</span><span class="nav-dot"></span>
+               </a>
+            </li>
+         </ul>
       </nav>
-      <main id="main-content" class="container">
-         <section id="home" class="page">
+      <main>
+         <section id="home" class="page container">
             <header class="position-relative">
-               <h1 class="mb-3 title">I'm <span class="highlight">Tyler</span></h1>
-               <h1 class="adjective">An <span class="highlight">Explorer</span></h1>
+               <h1 class="mb-3 title text-center">Tyler <span class="highlight">Kang</span></h1>
+               <h1 class="adjective text-center">An <span class="highlight">poopy</span></h1>
             </header>
+
          </section>
-         <section id="about" class="page">
+         <section id="about" class="page container">
             <div class="row" style="margin-bottom: 50px">
                <div class="col">
-                  <header class="section-heading text-center">
+                  <header class="section-heading text-right">
                      <h2 class="mb-4">Analytically minded </h2>
                      <h2 class="">Creative at Heart</h2>
                   </header>
                </div>
             </div>
             <div class="row">
-               <div class="col text-center">
+               <div class="col text-right">
                   <p class="section-content d-inline-block" style="width: 500px; margin: 0">
                      I'm a finance student at the University of Washington Foster School of Business.
                      My personal passion is computer science. In the 
@@ -60,7 +72,7 @@
                </div>
             </div>
          </section>
-         <section id="projects" class="page">
+         <section id="projects" class="page container">
             <div class="row" style="margin-bottom: 50px">
                <div class="col">
                   <h2 class="section-heading">A few of my projects</h2>
@@ -174,14 +186,14 @@
                      href="https://github.com/tykangler?tab=repositories">
                      More works
                   </a>
-                  <a class="work-details-button" href="src/assets/TylerKangResume.pdf">
+                  <a class="work-details-button" href="./assets/TylerKangResume.pdf">
                      Resume
                   </a>
                </div>
             </div>
          </section>
-         <section id="contact" class="pb-5">
-            <div class="row" >
+         <section id="contact" class="pb-5 container">
+            <div class="row">
                <div id="contact-message" class="section-heading col-12 mb-3">
                   <h3 class="text-center">Contact Me.</h3>
                </div>
@@ -195,12 +207,12 @@
                   <div class="float-right">
                   <a href="https://www.linkedin.com/in/tyler-n-kang/" 
                      class="ml-lg-3 contact-link mb-3">
-                     <img src="src/assets/linkedinicon.svg" alt="LinkedIn" 
+                     <img src="assets/linkedinicon.svg" alt="LinkedIn" 
                           width="30" height="30" >
                   </a>
                   <a href="https://www.github.com/tykangler" 
                      class="ml-lg-3 contact-link ml-2 mb-3">
-                     <img src="src/assets/githubicon.svg" alt="Github"
+                     <img src="assets/githubicon.svg" alt="Github"
                           width="30" height="30" >
                   </a>
                </div>
@@ -232,6 +244,6 @@
             <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
          </small>
       </footer> -->
-      <script src="src/js/main.js"></script>
+      <script src="js/main.js"></script>
    </body>
 </html>

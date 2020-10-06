@@ -1,0 +1,17 @@
+@use '../common/variables';
+
+.navigation {
+   position: absolute;
+   visibility: hidden;
+}
+
+.nav-dot {
+   paint-order: stroke;
+   stroke: rgba(#fff, 0);
+   stroke-width: .2em;
+   transition: all variables.$transition-speed;
+   
+   &.show {
+      stroke: rgba(#fff, 1);
+   }   
+}   

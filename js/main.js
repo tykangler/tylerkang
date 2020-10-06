@@ -44,5 +44,5 @@ function animateNavigationLinks() {
    }   
 }   
 
-observeDocumentSections();
-animateNavigationLinks();
+// observeDocumentSections();
+// animateNavigationLinks();

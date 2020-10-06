@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="56.876 0 497.546 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="gradient-1" bx:pinned="true">
+      <stop offset="0.727" style="stop-color: rgb(12, 10, 13);"/>
+      <stop offset="1" style="stop-color: rgb(255, 226, 160);"/>
+    </linearGradient>
+    <radialGradient id="gradient-1-0" gradientUnits="userSpaceOnUse" cx="305.484" cy="250" r="136.748" xlink:href="#gradient-1"/>
+    <linearGradient id="gradient-0" bx:pinned="true">
+      <stop offset="0.482" style="stop-color: rgb(255, 217, 134);"/>
+      <stop offset="0.74" style="stop-color: rgb(255, 248, 144);"/>
+      <stop offset="1" style="stop-color: rgba(255, 202, 79, 0.14);"/>
+    </linearGradient>
+    <radialGradient id="gradient-0-0" gradientUnits="userSpaceOnUse" cx="308.721" cy="255.086" r="221.675" xlink:href="#gradient-0"/>
+  </defs>
+  <circle style="fill: none; stroke: url(#gradient-0-0); stroke-width: 115.734px;" cx="308.721" cy="255.086" r="221.675" transform="matrix(0.869988, 0, 0, 0.870668, 36.900936, 27.904785)"/>
+  <circle style="fill: url(#gradient-1-0); stroke-width: 50px;" cx="305.484" cy="250" r="136.748" transform="matrix(1, 0, 0, 1.003631, 0, -1.404341)"/>
+  <circle style="fill: none; stroke-width: 6.45862px; stroke: rgb(255, 251, 171);" cx="305.307" cy="251.885" r="140.023" transform="matrix(0.997557, 0, 0, 0.99908, 1.088512, -1.773324)"/>
+  <circle style="fill: none; stroke: rgb(255, 251, 171); stroke-width: 19.677px;" cx="305.307" cy="251.885" r="140.023" transform="matrix(1.143261, 0, 0, 1.150882, -43.098625, -40.280792)"/>
+  <ellipse style="fill: rgb(255, 251, 171);" cx="308.02" cy="250" rx="216.743" ry="3.499"/>
+</svg>
