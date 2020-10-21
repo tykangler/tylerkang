@@ -1,13 +1,6 @@
-@use '../common/variables';
 
 // background styles
 
-#background {
-   background-image: 
-      url('../../assets/small_stars.svg'),
-      url('../../assets/medium_stars.svg'),
-      linear-gradient(180deg, 
-      #1a141a 0%, #1c191f 12.16%, 
-      #42272c 32.28%, #3C3126 65.1%, 
-      #1F1A20 85.49%, #131B1B 100%);
+main {
+   background-color: #222;
 }

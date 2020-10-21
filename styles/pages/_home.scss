@@ -1,4 +1,15 @@
-#home {
-   padding-top: 100px;
-}
+@use '../common/variables';
+@use '../components/highlights';
 
+#home {
+   .terminal {
+      padding-top: 450px;
+      margin-left: 90px;
+      margin-bottom: 200px;
+
+      > * {
+         margin-bottom: 10px;
+      }
+
+   }
+}

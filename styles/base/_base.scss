@@ -6,15 +6,17 @@ html {
 
 @media screen and (prefers-reduced-motion: reduce) {
 	html {
-		scroll-behavior: auto;
-	}
+		scroll-behavior: auto !important;
+   }
+
+   * {
+      transition: none !important;
+   }
 }
 
 body {
    -webkit-font-smoothing: antialiased !important;
    -moz-osx-font-smoothing: grayscale !important;
    box-sizing: border-box !important;
-   color: variables.$base-color !important;
-   font-family: variables.$content-font !important;
-
+   margin: 0;
 }

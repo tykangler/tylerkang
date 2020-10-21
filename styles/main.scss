@@ -4,15 +4,14 @@
 @use 'components/navigation';
 @use 'components/background';
 @use 'components/project';
-@use 'components/page';
-@use 'components/divider';
 @use 'components/section';
-@use 'components/title';
 
 @use 'base/base';
 
-@use 'pages/contact';
+@use 'pages/page';
 @use 'pages/home';
+@use 'pages/about';
+@use 'pages/contact';
 
 /* Classes for Theming:
 ** .callout

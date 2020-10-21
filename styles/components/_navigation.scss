@@ -6,12 +6,11 @@
 }
 
 .nav-dot {
-   paint-order: stroke;
-   stroke: rgba(#fff, 0);
-   stroke-width: .2em;
+   border-style: solid;
    transition: all variables.$transition-speed;
    
    &.show {
-      stroke: rgba(#fff, 1);
+      border-color: rgba(#fff, 1);
    }   
-}   
+}
+

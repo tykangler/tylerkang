@@ -1,30 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .navigation {
   position: absolute;
   visibility: hidden;
 }
 
 .nav-dot {
-  paint-order: stroke;
-  stroke: rgba(255, 255, 255, 0);
-  stroke-width: 0.2em;
+  border-style: solid;
   transition: all 300ms;
 }
 .nav-dot.show {
-  stroke: white;
+  border-color: white;
 }
 
 #background {
   background-image: url("../../assets/small_stars.svg"), url("../../assets/medium_stars.svg"), linear-gradient(180deg, #1a141a 0%, #1c191f 12.16%, #42272c 32.28%, #3C3126 65.1%, #1F1A20 85.49%, #131B1B 100%);
 }
 
-.callout, .project-note {
-  font-weight: 900 !important;
+.callout, .project-note, .section-heading {
+  font-weight: 700 !important;
 }
 
 .highlight, .project-note, .section-heading {
-  color: #ff7e7e;
+  color: #0f0f0f;
 }
 
 .section-heading {
@@ -60,7 +59,7 @@
 }
 .project-item:hover {
   transform: scale(1.02);
-  color: rgba(255, 250, 250, 0.85);
+  color: rgba(44, 44, 44, 0.85);
   text-decoration: none;
 }
 .project-title {
@@ -87,54 +86,95 @@
   color: inherit;
 }
 
-.page {
-  height: auto;
-  min-height: 100vh !important;
-}
-
-.divider {
-  transform: translateX(-20px);
-  height: 1.5px;
-  width: 95%;
-  margin-left: 0;
-  border-radius: 10px 10px 10px 10px;
-  background-color: #d8d8d8;
-}
-
-.title {
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-family: "Lato", "sans-serif";
-  font-size: 3rem;
-  line-height: 5.25rem;
-}
-.title * {
-  font: inherit;
-}
-
-.adjective {
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: auto !important;
+  }
+
+  * {
+    transition: none !important;
   }
 }
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   box-sizing: border-box !important;
-  color: #fffafa !important;
-  font-family: "Source Code Pro", "monospace" !important;
+  color: #2c2c2c !important;
+  font-family: "Montserrat", "sans-serif" !important;
+  margin: 0;
+  background-color: #f7f0f0;
+}
+
+.page {
+  height: auto;
+  min-height: 100vh !important;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #131313;
+}
+#home .home-content {
+  position: relative;
+  bottom: 150px;
+  color: #fff;
+}
+#home .home-content .title {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-family: "Lato", "sans-serif";
+  font-size: 3.5rem;
+  line-height: 5.25rem;
+  margin: 0;
+}
+#home .home-content .title * {
+  font: inherit;
+}
+#home .home-content .adjective {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  margin: 0;
+}
+#home .home-content .landing-links {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#home .home-content .landing-links a {
+  padding: 0.3rem;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  transition: all 300ms;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+#home .home-content .landing-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.3em;
+  text-decoration: none;
+  color: #fff;
+}
+
+#about {
+  display: grid;
+  background-color: #f7f0f0;
 }
 
 #contact {
@@ -160,10 +200,6 @@ body {
 }
 .contact-link:hover {
   text-decoration: none;
-}
-
-#home {
-  padding-top: 100px;
 }
 
 /* Classes for Theming:

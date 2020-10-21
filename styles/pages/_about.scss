@@ -1,0 +1,23 @@
+@use '../common/variables';
+@use '../components/highlights';
+
+#about {
+   display: flex;
+   margin: 30px;
+   background-color: #fdfdf8;
+
+   .section-heading {
+      flex: 1 auto;
+   }
+
+   hr {
+      position: absolute;
+      width: 1px;
+      height: 491px;
+      transform: rotate(45deg);
+   }
+
+   .section-content {
+      flex: 2 auto;
+   }
+}

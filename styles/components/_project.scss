@@ -5,17 +5,11 @@
 // styles
 
 .project {
-   &-container {
-      column-count: 2;
-      column-gap: 125px;
-      column-width: 350px;
-   }
-
    &-item {
       break-inside: avoid;
       page-break-inside: avoid;
-      transition: transform (variables.$transition-speed * 2.5);
-      color: inherit;
+      transition: all (variables.$transition-speed * 2.5);
+      color: variables.$base-color;
       text-decoration: none;
       margin-bottom: 125px;
       display: inline-block;
@@ -28,43 +22,25 @@
    }
 
    &-title {
-      // @extend .callout;
-      font: {
-         family: variables.$heading-font;
-         size: 2rem;
+      font-family: variables.$content-font;
+      font-size: 1.875rem;
+      position: relative;
+
+      &::before {
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         top: 0;
+         transform: translateX(-10px) translateY(7px);
+         background-color: variables.$accent-color;
       }
    }
 
    &-content {
-      @extend .section-content;
+      font-family: variables.$content-font;
+      font-size: 1.25rem;
+      margin-top: 20px;
    }
 
-   &-tag {
-      text-transform: uppercase;
-      border: {
-         color: #ff7e7e;
-         style: solid;
-      }
-      background-color: transparent !important;
-   }
-   
-   &-note {
-      @extend .highlight;
-      @extend .callout;
-   }
-}
-
-.work-details-button {
-   display: inline-block;
-   padding: 5px 20px;
-   text-decoration: underline;
-   color: white;
-   margin-bottom: 125px;
-   transition: all variables.$transition-speed;
-   width: 150px;
-
-   &:hover {
-      text-decoration: wavy;
-      color: inherit;
-   }
 }
