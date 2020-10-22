@@ -1,91 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-.navigation {
-  position: absolute;
-  visibility: hidden;
-}
-
-.nav-dot {
-  border-style: solid;
-  transition: all 300ms;
-}
-.nav-dot.show {
-  border-color: white;
-}
-
-#background {
-  background-image: url("../../assets/small_stars.svg"), url("../../assets/medium_stars.svg"), linear-gradient(180deg, #1a141a 0%, #1c191f 12.16%, #42272c 32.28%, #3C3126 65.1%, #1F1A20 85.49%, #131B1B 100%);
-}
-
-.callout, .project-note, .section-heading {
-  font-weight: 700 !important;
-}
-
-.highlight, .project-note, .section-heading {
-  color: #0f0f0f;
-}
-
-.section-heading {
-  font-family: "Lato", "sans-serif";
-  font-size: 3rem;
-  letter-spacing: 0.2em;
-  line-height: 100px;
-  text-transform: capitalize;
-  font-weight: 400;
-}
-.section-heading * {
-  font: inherit;
-}
-.section-content, .project-content {
-  font-weight: 400;
-  line-height: 40px;
-  font-size: 1rem;
-}
-
-.project-container {
-  column-count: 2;
-  column-gap: 125px;
-  column-width: 350px;
-}
-.project-item {
-  break-inside: avoid;
-  page-break-inside: avoid;
-  transition: transform 750ms;
-  color: inherit;
-  text-decoration: none;
-  margin-bottom: 125px;
-  display: inline-block;
-}
-.project-item:hover {
-  transform: scale(1.02);
-  color: rgba(44, 44, 44, 0.85);
-  text-decoration: none;
-}
-.project-title {
-  font-family: "Lato", "sans-serif";
-  font-size: 2rem;
-}
-.project-tag {
-  text-transform: uppercase;
-  border-color: #ff7e7e;
-  border-style: solid;
-  background-color: transparent !important;
-}
-.work-details-button {
-  display: inline-block;
-  padding: 5px 20px;
-  text-decoration: underline;
-  color: white;
-  margin-bottom: 125px;
-  transition: all 300ms;
-  width: 150px;
-}
-.work-details-button:hover {
-  text-decoration: wavy;
-  color: inherit;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -102,114 +15,91 @@ html {
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
-  box-sizing: border-box !important;
-  color: #2c2c2c !important;
-  font-family: "Montserrat", "sans-serif" !important;
   margin: 0;
-  background-color: #f7f0f0;
+}
+
+main {
+  background-color: #222222;
+  background-image: linear-gradient(180deg, #222, #141414 70%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .page {
   height: auto;
-  min-height: 100vh !important;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
-#home {
-  height: 100vh;
+#landing {
+  padding-top: 300px;
+  padding-left: 200px;
+  padding-right: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  background-color: #131313;
 }
-#home .home-content {
-  position: relative;
-  bottom: 150px;
-  color: #fff;
+#landing .title {
+  font-weight: 600;
+  font-family: "Inconsolata", "monospace";
+  font-size: 70px;
+  color: #e9fcff;
+  margin-bottom: 50px;
 }
-#home .home-content .title {
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-family: "Lato", "sans-serif";
-  font-size: 3.5rem;
-  line-height: 5.25rem;
-  margin: 0;
-}
-#home .home-content .title * {
-  font: inherit;
-}
-#home .home-content .adjective {
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  margin: 0;
-}
-#home .home-content .landing-links {
-  margin-top: 20px;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-#home .home-content .landing-links a {
-  padding: 0.3rem;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.05rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  transition: all 300ms;
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-}
-#home .home-content .landing-links a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 0.3em;
-  text-decoration: none;
-  color: #fff;
-}
-
-#about {
-  display: grid;
-  background-color: #f7f0f0;
-}
-
-#contact {
-  position: relative;
-  margin-bottom: 0;
-}
-
-.plain {
-  color: white;
-}
-
-#contact-resume {
-  border-bottom: 5px dashed;
+#landing .landing-content {
+  font-family: "Inconsolata", "monospace";
+  color: #e9fcff;
   display: inline-block;
-  color: inherit;
-  text-decoration: wavy;
-  line-height: 45px;
+  width: 500px;
+  align-self: flex-end;
+  font-size: 18px;
+  line-height: 30px;
 }
 
-.contact-link {
-  text-decoration: none;
-  color: inherit;
-}
-.contact-link:hover {
-  text-decoration: none;
+.small-stars, .medium-stars {
+  position: absolute;
+  right: 0;
+  width: 100vw;
 }
 
-/* Classes for Theming:
-** .callout
-** .highlight
-** .title
-** .section-heading
-** .section-content
-** .project-title
-** .project-content
-*/
+@keyframes rotate-image {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#contact {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+#contact hr {
+  width: 50vw;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-left: 0;
+  margin-right: 0;
+}
+#contact .contact-links {
+  flex-direction: row;
+  display: flex;
+}
+#contact .contact-links * {
+  align-items: center;
+  color: #e9fcff;
+  text-decoration: none;
+  font-family: "Inconsolata", "monospace";
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  margin-right: 20px;
+  margin-left: 20px;
+}
 
 /*# sourceMappingURL=main.css.map */

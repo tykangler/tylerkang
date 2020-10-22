@@ -1,24 +1,8 @@
 @use 'common/fonts';
 @use 'common/variables';
 
-@use 'components/navigation';
-@use 'components/background';
-@use 'components/project';
-@use 'components/section';
-
 @use 'base/base';
 
 @use 'pages/page';
 @use 'pages/home';
-@use 'pages/about';
 @use 'pages/contact';
-
-/* Classes for Theming:
-** .callout
-** .highlight
-** .title
-** .section-heading
-** .section-content
-** .project-title
-** .project-content
-*/

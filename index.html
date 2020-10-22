@@ -11,137 +11,24 @@
    </head>
    <body>
       <main>
-         <section id="home" class="page">
-            <div class="background">
-               <img src="assets/small_stars.svg">
-               <img src="assets/medium_stars.svg">
-            </div>
-            <h1 class="title">Tyler Kang_</h1>
-            <nav>
-               <ul>
-                  <li>
-                     <a href="#about" class="nav-link">01. About</a>
-                  </li>
-                  <li>
-                     <a href="#projects" class="nav-link">02. Projects</a>
-                  </li>
-                  <li>
-                     <a href="#contact" class="nav-link">03. Contact</a>
-                  </li>
-                  <li>
-                     <a href="./assets/TylerKangResume.pdf" 
-                        target="_blank" class="nav-link">04. Resume</a>
-                  </li>
-               </ul>
-            </nav>
-         </section>
-         <section id="about" class="page">
-            <header class="section-heading">
-               <span>01.</span>
-               <h2>About</h2>
-            </header>
-            <hr>
-            <p class="section-content">
+         <img class="small-stars" src="assets/small_stars.svg">
+         <img class="medium-stars" src="assets/medium_stars.svg">
+         <section id="landing" class="page">
+            <h1 class="title">Tyler Kang<span class="blink">_</span></h1>
+            <p class="landing-content">
                I'm a finance student at the University of Washington Foster School of Business.
-               My personal passion is computer science. In the 
-               future, I hope to use both of these skills in my work and create the first 
-               intergalactic trade federation. 
+               My personal passion is computer science. In the future, I hope to merge both of 
+               these skills and create the first intergalactic trade federation. 
             </p>
          </section>
-         <section id="projects" class="page">
-            <header class="section-heading">
-               <span>02.</span>
-               <h2>Projects</h2>
-            </header>
-            <div class="project-container">
-               <a class="project-item" rel="noopener" 
-                  href="https://github.com/tykangler/search-engine">
-                  <h3 class="project-title">
-                     Search Engine
-                  </h3>
-                  <p class="project-content">
-                     A rudimentary search engine using a graph implementation of Larry Page's
-                     PageRank algorithm to sort search results.
-                     <br>
-                     <span class="project-note">
-                        Source not posted in accordance with UW academic policy.
-                     </span>
-                  </p>
-               </a>
-               <a class="project-item" rel="noopener" 
-                  href="https://github.com/tykangler/scheduler" target="_blank">
-                  <h3 class="project-title">
-                     Concurrent Task Scheduler
-                  </h3>
-                  <p class="project-content">
-                     A task scheduling library. The task scheduler runs tasks concurrently 
-                     on a threadpool when possible. Tasks may be given dependencies, only
-                     allowing them to run when another task is finished. Tasks are stored in
-                     a <span class="project-note">lock-free work-stealing</span> queue. 
-                     <br>
-                     <span class="project-note">
-                        This project was for learning purposes, not for use in production.
-                     </span>
-                  </p>
-               </a>
-               <a class="project-item" rel="noopener" 
-                  href="https://github.com/tykangler/maze-solver">
-                  <h3 class="project-title">
-                     Maze Creator + Solver
-                  </h3>
-                  <p class="project-content">
-                     Implements Kruskal's Minimum Spanning Tree algorithm to generate a 
-                     solveable maze, and Djikstra's shortest path algorithm to find the 
-                     shortest solution to the maze.
-                     <br>
-                     <span class="project-note">
-                        Source not posted in accordance with UW accademic policy.
-                     </span>
-                  </p>
-               </a>
-               <a class="project-item" rel="noopener" 
-                  href="https://github.com/tykangler/sudoku-solver">
-                  <h3 class="project-title">
-                     Sudoku Solver
-                  </h3>
-                  <p class="project-content">
-                     Implements recursive backtracking to solve a sudoku board. Game board
-                     is created using a text input file, providing pre filled values.
-                  </p>
-               </a>
-               <a class="project-item" rel="noopener" 
-                  href="https://github.com/tykangler/searcher">
-                  <h3 class="project-title">
-                     Fuzzy String Matcher
-                  </h3>
-                  <p class="project-content">
-                     A fuzzy string searcher that allows the user to type in a search
-                     parameter, and returns approximate string matches. Uses Peter Norvig's
-                     spell checking algorithm, along with a Longest Common Substring algorithm
-                     to calculate edit distance.
-                  </p>
-               </a>
-               <a class="project-item" rel="noopener" 
-                  href="https://github.com/tykangler/pitcher">
-                  <h3 class="project-title">
-                     Midi Player
-                  </h3>
-                  <p class="project-content">
-                     Reads input from a MIDI keyboard (or any MIDI device) and executes
-                     the appropriate action for the read MIDI input. For example, a MIDI 
-                     Note event outputs sound, and a Controller event changes the instrument.
-                  </p>
-               </a>
-               <a class="work-details-button" rel="noopener"
-                  href="https://github.com/tykangler?tab=repositories">
-                  More works
-               </a>
-               <a class="work-details-button" href="./assets/TylerKangResume.pdf">
-                  Resume
-               </a>
-            </div>
-         </section>
          <section id="contact">
+            <hr>
+            <div class="contact-links">
+               <a href="https://www.linkedin.com/in/tyler-n-kang/" rel="noopener" target="_blank">LinkedIn</a>
+               <a href="https://github.com/tykangler" rel="noopener" target="_blank">Github</a>
+               <span>tyler.n.kang@outlook.com</span>
+               <span>425)314-2399</span>
+            </div>
          </section>
       </main>
       <script src="js/main.js"></script>

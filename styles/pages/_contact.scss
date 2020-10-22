@@ -1,28 +1,32 @@
-// #contact-message {
-   //    border-right: 3px solid rgba(white, 0.3);
-// }
+@use '../common/variables';
 
 #contact {
-   position: relative;
-   margin-bottom: 0;
-}
+   display: flex;
+   align-items: center;
+   padding-bottom: 20px;
+   padding-left: 10px;
 
-.plain {
-   color: white;
-}
-
-#contact-resume {
-   border-bottom: 5px dashed;
-   display: inline-block;
-   color: inherit;
-   text-decoration: wavy;
-   line-height: 45px;
-}
-
-.contact-link {
-   text-decoration: none;
-   color: inherit;
-   &:hover {
-      text-decoration: none;
+   hr {
+      width: 50vw;
+      background-color: rgba(#fff, 0.4);
+      margin-left: 0;
+      margin-right: 0;
    }
+
+   .contact-links {
+      flex-direction: row;
+      display: flex;
+
+      * {
+         align-items: center;
+         color: variables.$accent-color;
+         text-decoration: none;
+         font-family: variables.$accent-font;
+         font-size: 15px;
+         letter-spacing: .1em;
+         margin-right: 20px;
+         margin-left: 20px;
+      }
+   }
+
 }

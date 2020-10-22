@@ -1,15 +1,38 @@
 @use '../common/variables';
-@use '../components/highlights';
 
-#home {
-   .terminal {
-      padding-top: 450px;
-      margin-left: 90px;
-      margin-bottom: 200px;
+#landing {
+   padding-top: 300px;
+   padding-left: 200px;
+   padding-right: 200px;
+   display: flex;
+   flex-direction: column;
 
-      > * {
-         margin-bottom: 10px;
-      }
-
+   .title {
+      font-weight: 600;
+      font-family: variables.$accent-font;
+      font-size: 70px;
+      color: variables.$accent-color;
+      margin-bottom: 50px;
    }
+
+   .landing-content {
+      font-family: variables.$accent-font;
+      color: variables.$accent-color;
+      display: inline-block;
+      width: 500px;
+      align-self: flex-end;
+      font-size: 18px;
+      line-height: 30px;
+   }
+}
+
+.small-stars, .medium-stars {
+   position: absolute;
+   right: 0;
+   width: 100vw;
+}
+
+@keyframes rotate-image {
+   from { transform: rotate(0deg); }
+   to { transform: rotate(360deg); }
 }
